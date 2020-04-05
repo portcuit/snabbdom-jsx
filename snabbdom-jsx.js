@@ -17,7 +17,7 @@ function normalizeAttrs(attrs, nsURI, defNS, modules) {
   var map = { ns: nsURI };
   for (var i = 0, len = modules.length; i < len; i++) {
     var mod = modules[i];
-    if(attrs[mod] != null)
+    if(mod in attrs)
       map[mod] = attrs[mod];
   }
   for(var key in attrs) {
